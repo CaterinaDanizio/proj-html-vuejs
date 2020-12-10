@@ -5,11 +5,6 @@
     <title>Project HTML & Vue js</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- AXIOS -->
@@ -18,20 +13,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- FONTAWASOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Container Vue -->
-    <div class="container" id="app">
+    <div id="app">
 
       <!-- Header -->
       <header>
         <!-- Navbar con contatti e social -->
         <nav class="back-lime flex">
           <!-- Call us -->
-          <div class="contact">
+          <div class="menu left">
+            <ul>
+              <li v-for="item in callUs">
+                <a :href="item.link"></a>
+                <i :class="item.tel"></i>
+                {{ item.contact }}
+              </li>
+            </ul>
           </div>
           <!-- Social -->
-          <div class="contact">
+          <div class="menu">
+            <ul>
+              <li v-for="item in social">
+                <a :href="item.link"></a>
+                <i :class="item.name"></i>
+              </li>
+            </ul>
           </div>
         </nav>
         <!-- Sezione jumbotron all'interno dell'header -->
@@ -40,13 +53,22 @@
           <nav class="flex">
             <!-- Logo -->
             <div class="logo">
-
+              <img :src="logo" alt="logo avada">
             </div>
 
             <!-- Menu -->
-            <div class="menu">
+            <div class="menu label">
               <ul>
-                <li></li>
+                <li v-for="menuItem in menuList">
+                  <a :href="menuItem.link"></a>
+                  {{ menuItem.label  }}
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <button type="button" name="button" class="CTA lightblue">
+                    {{ cta }}
+                  </button>
+                </li>
               </ul>
             </div>
           </nav>
@@ -175,7 +197,7 @@
               </div>
             </div>
           </div>
-          </div>
+
           <div class="title">
             <button type="button" name="button" class="CTA lightblue">READ MORE TESTIMONIALS</button>
           </div>
@@ -201,27 +223,42 @@
       <footer>
 
       <!-- Contenitore tre colonne footer  -->
-        <div class="">
+        <div class="flex">
           <!-- About -->
-          <div class="">
-
+          <div class="block">
+            <h2>{{ footer[0].title }}</h2>
+            <p>{{ footer[0].description }}</p>
+            <img :src="logo" alt="">
           </div>
 
           <!-- Avada Movers -->
-          <div class="">
-
+          <div class="block">
+            <h2>{{ footer[1].title }}</h2>
+            <ul>
+              <li v-for="(item, index) in footer[1].list">{{ item.label }}</li>
+            </ul>
           </div>
 
           <!-- Recent post -->
-          <div class="">
-
+          <div class="block last">
+            <h2>{{ footer[2].title }}</h2>
+            <ul>
+              <li v-for="(item, index) in footer[2].postlist">{{ item.label }}</li>
+            </ul>
           </div>
         </div>
 
-
         <!-- Credits -->
-        <div class="">
-
+        <div class="menu back-lime">
+          <ul>
+            <li v-for="item in credits">{{ item }}</li>
+          </ul>
+          <ul>
+            <li v-for="item in social">
+              <a :href="item.link"></a>
+              <i :class="item.name"></i>
+            </li>
+          </ul>
         </div>
 
       </footer> <!-- fine FOOTER -->
