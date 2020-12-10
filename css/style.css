@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 .flex {
@@ -15,22 +16,23 @@
   float: left;
 }
 
-/* Colori */
-
-.lime {
-  background-color: #69bf14;
+.fl-right {
+  float: right;
 }
 
-.grey {
-  color: #6b6b6b;
+/* Colori */
+
+.back-lime {
+  background-color: #69bf14;
 }
 
 .lightblue {
   background-color: #1975c0;
   color: white;
+  text-align: center;
 }
 
-/* Header */
+/* HEADER */
 
 nav.flex {
   height: 70px;
@@ -44,18 +46,32 @@ nav.flex {
   /* debug */
   border: 1px solid black;
 }
+
+/* MAIN */
+
+  /* Jumbotron  */
 .back-img {
-  min-height: 450px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  /* debug */
-  border: 1px solid green;
 }
 
 .jumbotron {
+  min-height: 450px;
   background-image: url(../img/avada-movers-homeherobackground-final.jpg);
   background-position: center;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+h4.grey {
+  font-weight: bolder;
+  color: grey;
+  padding: 20px;
 }
 
 .logo {
@@ -77,26 +93,54 @@ nav.flex {
   width: 100%;
   align-items: center;
   justify-content: center;
-  /* debug */
-  border: 1px solid red;
 }
 
 .title {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
-  font-weight: bolder;
-  /* debug */
-  border: 1px solid black;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.awards {
+  padding-top: 60px;
+  background-color: #f9fbfc;
+}
+
+  p {
+  line-height: 30px;
+}
+
+h3 {
+  padding-left: 10px;
+  letter-spacing: 2px;
 }
 
 section.lightblue {
-  min-height: 100px;
+  min-height: 150px;
   align-items: center;
+}
+
+section.service {
+  padding-top: 100px;
 }
 
 .service {
   justify-content: space-around;
+}
+
+h2.lime {
+ color: #69bf14;
+ font-weight: bolder;
+ font-size: 40px;
+ padding: 20px;
+}
+
+.service > .block > .title {
+  background-color: white;
+  width: 90%;
+  padding: 15px;
 }
 
 .block {
@@ -104,8 +148,6 @@ section.lightblue {
   min-height: 200px;
   background-color: #f2f5f8;
   text-align: center;
-  /* debug */
-  border: 1px solid black;
 }
 
 .block > img {
@@ -114,12 +156,74 @@ section.lightblue {
   padding: 15px 0;
 }
 
-.quote {
-  background-image: url(../img/avada-movers-servicetwophoto-final.jpg);
-  background-position: center;
+.block h3 {
+  color: #1975c0;
+  font-weight: bolder;
+  font-size: 22px;
 }
 
-h1 {
-  font-size: 60px;
+.quote {
+  height: 650px;
+  background-image: url(../img/avada-movers-movewithease-background-new.jpg);
+  background-position: center left;
+  padding-top: 100px;
+}
+
+.CTA {
+  border-radius: 15px;
+  border: 1px solid #1975c0;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 20px 0;
   font-weight: bolder;
+}
+
+.pop-up {
+  width: 45%;
+  min-height: 350px;
+  margin-top: 90px;
+  margin-right: 40px;
+  color: white;
+  text-align: center;
+  border: 15px solid #5aa510;
+}
+
+.pop-up h4 {
+  font-weight: bolder;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.pop-up  h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.pop-up p {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.testimonials {
+  padding-top: 100px;
+  justify-content: space-around;
+  background-image: url(../img/avada-movers-testimonial-background.jpg);
+}
+
+.testimonials img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.testimonials p {
+  font-style: italic;
+}
+
+.free {
+  min-height: 400px;
+  padding-top: 100px;
+  background-image: url(../img/avada-movers-request-quote-background.jpg);
+  border-bottom: 15px solid #5aa510;
 }
