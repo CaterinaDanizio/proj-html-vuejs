@@ -6,14 +6,11 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .flex {
   display: flex;
-}
-
-.fl-left {
-  float: left;
 }
 
 .fl-right {
@@ -24,10 +21,19 @@
   cursor: pointer;
 }
 
-/* Colori */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Colori background/img */
 
 .back-lime {
   background-color: #69bf14;
+  color: white;
 }
 
 .lightblue {
@@ -36,85 +42,119 @@
   text-align: center;
 }
 
-/* HEADER */
-
-nav.flex {
-  height: 50px;
-  line-height: 50px;
-  justify-content: space-between;
-  padding-left: 20px;
-}
-
-/* MAIN */
-
-  /* Jumbotron  */
 .back-img {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* Stile titoli */
+.bolder {
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 60px;
+  padding: 5px;
+}
+
+h2.lime {
+ color: #69bf14;
+ font-size: 40px;
+ padding: 20px;
+}
+
+.pop-up  h2 {
+  font-size: 40px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.lightblue h3 {
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+
+.block h3 {
+  color: #1975c0;
+  font-size: 22px;
+}
+
+h4.grey {
+  color: grey;
+  padding: 20px;
+}
+
+.pop-up h4 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+p {
+  line-height: 30px;
+}
+
+/* Spazi e allineamenti */
+
+.pd-100 {
+  padding-top: 100px;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+/* HEADER */
+
+nav.flex {
+  height: 50px;
+  line-height: 50px;
+  justify-content: space-around;
+  padding-left: 20px;
+}
+
+/* MAIN */
+
 .jumbotron {
   min-height: 450px;
   background-image: url(../img/avada-movers-homeherobackground-final.jpg);
 }
 
-h1 {
-  font-size: 60px;
-  font-weight: bolder;
-  padding: 5px;
-}
-
-h4.grey {
-  font-weight: bolder;
-  color: grey;
-  padding: 20px;
-}
-
-.left {
-  width: 30%;
-  min-height: 70px;
-}
-
 .menu li {
   display: inline-block;
-  list-style: none;
-  padding-right: 10px;
+  padding-right: 8px;
   color: white;
-}
-
-.menu.label {
-  width: 65%;
+  font-size: 13px;
 }
 
 .logo {
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 .menu.label li {
   color: black;
   font-weight: bolder;
   padding-right: 50px;
-  padding-top: 30px;
+  padding-top: 15px;
+  font-size: 16px;
 }
 
-li:hover {
-  color: #69bf14;
+.menu.label li:hover {
+  color: #5aa510;
 }
 
 .container-payoff {
-  height: calc(450px - 70px);
   width: 100%;
+  height: calc(450px - 70px);
   align-items: center;
-  justify-content: center;
 }
 
 .title {
   width: 70%;
-  margin: 0 auto;
   text-align: center;
   font-weight: bold;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .awards {
@@ -122,64 +162,39 @@ li:hover {
   background-color: #f9fbfc;
 }
 
-p {
-  line-height: 30px;
-}
-
-h3 {
-  padding-left: 10px;
-  letter-spacing: 2px;
-}
-
 section.lightblue {
   min-height: 150px;
   align-items: center;
 }
 
-section.service {
-  padding-top: 100px;
+.block {
+  min-width: 380px;
+  background-color: #f2f5f8;
+  text-align: center;
 }
 
-.service {
-  justify-content: space-around;
-}
-
-h2.lime {
- color: #69bf14;
- font-weight: bolder;
- font-size: 40px;
- padding: 20px;
-}
-
-.service > .block > .title {
+.block > .title {
   background-color: white;
   width: 90%;
   padding: 15px;
-}
-
-.block {
-  width: 380px;
-  background-color: #f2f5f8;
-  text-align: center;
 }
 
 .block > img {
   width: 350px;
   height: auto;
   padding: 15px 0;
+  transition: all 1s ease;
 }
 
-.block h3 {
-  color: #1975c0;
-  font-weight: bolder;
-  font-size: 22px;
+.block > img:hover {
+  width: 380px;
+  height: auto;
 }
 
 .quote {
   height: 650px;
   background-image: url(../img/avada-movers-movewithease-background-new.jpg);
   background-position: center left;
-  padding-top: 100px;
 }
 
 .CTA {
@@ -204,27 +219,12 @@ h2.lime {
   border: 15px solid #5aa510;
 }
 
-.pop-up h4 {
-  font-weight: bolder;
-  padding-top: 30px;
-  padding-bottom: 10px;
-}
-
-.pop-up  h2 {
-  font-size: 40px;
-  font-weight: bolder;
-  padding: 10px;
-  border-bottom: 1px solid white;
-}
-
 .pop-up p {
   padding-top: 30px;
   padding-bottom: 10px;
 }
 
 .testimonials {
-  padding-top: 100px;
-  justify-content: space-around;
   background-image: url(../img/avada-movers-testimonial-background.jpg);
 }
 
@@ -239,33 +239,46 @@ h2.lime {
 
 .free {
   min-height: 400px;
-  padding-top: 100px;
   background-image: url(../img/avada-movers-request-quote-background.jpg);
   border-bottom: 15px solid #5aa510;
 }
+
+/* FOOTER */
 
 footer .block {
   background-color: white;
   text-align: left;
   padding-left: 20px;
+  padding-bottom: 30px;
   margin-right: 40px;
 }
 
 footer .block li {
-  list-style: none;
   padding: 10px;
 }
 
+footer .block li:hover {
+  color: #5aa510;
+}
+
 footer .block.last li {
-  list-style: none;
   padding: 18px;
 }
 
 footer .block h2 {
-  font-weight: bolder;
-  padding-bottom: 10px;
+  padding: 40px 0;
 }
 
 footer .block img {
   width: 200px;
+}
+
+footer .menu.back-lime {
+  text-align: center;
+  font-size: 14px;
+  padding: 30px 0;
+}
+
+footer .menu.back-lime li {
+  padding-bottom: 10px;
 }

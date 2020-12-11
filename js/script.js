@@ -11,6 +11,7 @@ var app = new Vue({
     cta: "FREE QUOTE",
 
     // HEADER
+
     callUs: [
       { tel: "fas fa-phone",
         contact: "Call us for a Free Quote: 1.800.555.6789"
@@ -69,15 +70,16 @@ var app = new Vue({
         label: "Contact",
         link: "index.html"
       }
-
     ],
+
+    // FOOTER
 
     footer: [
       {
       title: "ABOUT",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
+      },
+      {
       title: "AVADA MOVERS",
       list: [
         {
@@ -152,6 +154,6 @@ var app = new Vue({
     "Avada Theme by ThemeFusion" + " | ",
     "All Rights Reserved" + " | ",
     "Powered by WordPress"
-  ],
+    ],
   }
 })
