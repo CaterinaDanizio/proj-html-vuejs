@@ -186,7 +186,7 @@ section.lightblue {
   transition: all 1s ease;
 }
 
-.block > img:hover {
+.zoom.block > img:hover {
   width: 380px;
   height: auto;
 }
